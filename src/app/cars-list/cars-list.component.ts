@@ -31,7 +31,7 @@ export class CarsListComponent implements OnInit {
 
   constructor(public service: CarsService) { }
 
-  async ngOnInit(): void {
+  async ngOnInit() {
     this.car_brand = [
       {
         id: 'hyundai',
