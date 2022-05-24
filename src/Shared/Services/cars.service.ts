@@ -110,9 +110,9 @@ export class CarsService {
     return this.get<any>(endpoint.GET_CAR + ID);
   }
 
-  // async GetAllCarss(brand: any,  modal: any, registration_year: any, kms:any, budget:any): Promise<any> {
-  //   return this.get<any>(endpoint.GET_CAR + "brand=" + brand + "&modal=" + modal + "&registration_year=" + registration_year + "&kms=" + kms + & "&budget=" + budget);
-  // }
+  async GetAllCarss(brand: string, modal: string, registration_year: string, kms: string, budget: string): Promise<any> {
+    return this.get<any>(endpoint.GET_ALL_CAR + "brand=" + brand + "&modal=" + modal + "&registration_year=" + registration_year + "&kms=" + kms + "&budget=" + budget);
+  }
 
   async DeleteCars(ID: any): Promise<any> {
     return this.delete<any>(endpoint.DELETE_CAR + ID);
